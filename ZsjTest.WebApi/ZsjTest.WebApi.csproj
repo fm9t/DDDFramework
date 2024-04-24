@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>d5f8ba1e-38ad-470e-abcb-dc20582d2d88</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.0" />
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Castle.Core" Version="5.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.3" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
+    <PackageReference Include="Serilog.Enrichers.Process" Version="2.0.2" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ZsjTest.Application.Impl\ZsjTest.Application.Impl.csproj" />
+    <ProjectReference Include="..\ZsjTest.Application\ZsjTest.Application.csproj" />
+    <ProjectReference Include="..\ZsjTest.Domain.Repository.Impl.SQLite\ZsjTest.Domain.Repository.Impl.SQLite.csproj" />
+    <ProjectReference Include="..\ZsjTest.Domain.Repository\ZsjTest.Domain.Repository.csproj" />
+    <ProjectReference Include="..\ZsjTest.DomainSvc.Impl\ZsjTest.DomainSvc.Impl.csproj" />
+    <ProjectReference Include="..\ZsjTest.Domain\ZsjTest.Domain.csproj" />
+    <ProjectReference Include="..\ZsjTest.Infrastructure\ZsjTest.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
+  </ItemGroup>
+
+</Project>
